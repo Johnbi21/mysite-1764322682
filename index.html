@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAPEUR.NET - Votre boutique en ligne préférée</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <custom-navigation></custom-navigation>
+
+    <!-- Hero Banner -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-orange-600 text-white py-16 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenue sur YAPEUR.NET</h1>
+            <p class="text-xl md:text-2xl mb-8">Découvrez les meilleures offres du moment</p>
+            <div class="relative max-w-2xl mx-auto">
+                <input type="text" placeholder="Que recherchez-vous aujourd'hui ?" 
+                       class="w-full py-4 px-6 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                <button class="absolute right-2 top-2 bg-orange-600 hover:bg-orange-700 text-white py-2 px-6 rounded-full transition duration-300">
+                    <i data-feather="search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Catégories Populaires</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="category-card bg-blue-50 hover:bg-blue-100 rounded-lg p-4 text-center transition duration-300 cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="smartphone" class="text-white"></i>
+                    </div>
+                    <span class="text-gray-800 font-medium">Smartphones</span>
+                </div>
+                <div class="category-card bg-orange-50 hover:bg-orange-100 rounded-lg p-4 text-center transition duration-300 cursor-pointer">
+                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="tv" class="text-white"></i>
+                    </div>
+                    <span class="text-gray-800 font-medium">Électronique</span>
+                </div>
+                <div class="category-card bg-blue-50 hover:bg-blue-100 rounded-lg p-4 text-center transition duration-300 cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="home" class="text-white"></i>
+                    </div>
+                    <span class="text-gray-800 font-medium">Maison</span>
+                </div>
+                <div class="category-card bg-orange-50 hover:bg-orange-100 rounded-lg p-4 text-center transition duration-300 cursor-pointer">
+                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="shopping-bag" class="text-white"></i>
+                    </div>
+                    <span class="text-gray-800 font-medium">Mode</span>
+                </div>
+                <div class="category-card bg-blue-50 hover:bg-blue-100 rounded-lg p-4 text-center transition duration-300 cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="cpu" class="text-white"></i>
+                    </div>
+                    <span class="text-gray-800 font-medium">Informatique</span>
+                </div>
+                <div class="category-card bg-orange-50 hover:bg-orange-100 rounded-lg p-4 text-center transition duration-300 cursor-pointer">
+                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i data-feather="heart" class="text-white"></i>
+                    </div>
+                    <span class="text-gray-800 font-medium">Santé</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sales -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Ventes Flash 🔥</h2>
+                <div class="flex items-center space-x-4">
+                    <span class="text-orange-600 font-bold">Se termine dans:</span>
+                    <div class="flex space-x-2" id="countdown">
+                        <div class="bg-orange-600 text-white px-3 py-2 rounded-lg font-mono">23</div>
+                        <div class="bg-orange-600 text-white px-3 py-2 rounded-lg font-mono">59</div>
+                        <div class="bg-orange-600 text-white px-3 py-2 rounded-lg font-mono">59</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="products-grid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+
+    <!-- Component Scripts -->
+    <script src="components/navigation.js"></script>
+    <script src="components/footer.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+    
+    <!-- Feather Icons -->
+    <script>feather.replace();</script>
+</body>
+</html>
